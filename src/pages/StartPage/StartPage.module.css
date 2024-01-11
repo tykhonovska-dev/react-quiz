@@ -1,0 +1,90 @@
+.startPage {
+    display: flex;
+    column-gap: 20px;
+}
+
+.startPageLeftBlock {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.startPageTitle {
+    font-size: 54px;
+    line-height: 1.1;
+    font-weight: 200;
+}
+
+.startPageBoldText {
+    font-size: 64px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.startPageTip {
+    display: block;
+    margin-top: 40px;
+    font-size: 18px;
+    letter-spacing: .5px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--secondary-text-color);
+}
+
+.startPageRightBlock {
+    width: 45%;
+}
+
+.quizSubjects {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+@media (max-width: 1023px) {
+    .startPage {
+        flex-direction: column;
+        column-gap: 0;
+        row-gap: 60px;
+    }
+
+    .startPageLeftBlock {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .startPageTip {
+        margin-top: 10px;
+    }
+
+    .startPageRightBlock {
+        width: 75%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .startPage {
+        row-gap: 40px;
+    }
+
+    .startPageLeftBlock {
+        width: 100%;
+    }
+
+    .startPageRightBlock {
+        width: 100%;
+    }
+}
+
+@media (max-width: 550px) {
+    .startPageTitle {
+        font-size: 40px;
+    }
+
+    .startPageBoldText {
+        font-size: 40px;
+    }
+}

@@ -1,0 +1,110 @@
+.resultPage {
+    display: flex;
+    column-gap: 40px;
+}
+
+.resultPageLeftBlock {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.resultPageTitle {
+    font-size: 54px;
+    line-height: 1.1;
+    font-weight: 200;
+}
+
+.resultPageBoldText {
+    font-size: 64px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.resultPageRightBlock {
+    width: 50%;
+}
+
+.resultPageBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--secondary-background-color);
+    color: var(--accent-color);
+    font-size: 100px;
+    font-weight: 700;
+}
+
+.resultPageBox span {
+    font-size: 18px;
+    letter-spacing: .5px;
+    font-weight: 300;
+    color: var(--primary-text-color);
+}
+
+.resultPageBtn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--accent-color);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: .5px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.resultPAgeBtn:hover {
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, .3);
+    transition: all .5s ease;
+}
+
+
+@media (max-width: 1023px) {
+    .resultPage {
+        flex-direction: column;
+        column-gap: 0;
+        row-gap: 60px;
+    }
+
+    .resultPageLeftBlock {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .resultPageRightBlock {
+        width: 75%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .resultPage {
+        row-gap: 40px;
+    }
+
+    .resultPageLeftBlock {
+        width: 100%;
+    }
+
+    .resultPageRightBlock {
+        width: 100%;
+    }
+}
+
+@media (max-width: 550px) {
+    .resultPageTitle {
+        font-size: 40px;
+    }
+
+    .resultPageBoldText {
+        font-size: 40px;
+    }
+}
