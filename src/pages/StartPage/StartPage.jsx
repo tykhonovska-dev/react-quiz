@@ -1,7 +1,12 @@
 import { quizSubjectsData } from "../../quizData";
 import QuizSubject from "../../components/QuizSubject/QuizSubject";
+import { useContext } from "react";
+import { QuizContext } from "../../Contexts";
 import styles from './StartPage.module.css';
-function StartPage({setQuizSubject}) {
+
+function StartPage() {
+  const { setQuizSubject} = useContext(QuizContext);
+
   return (
     <div className={styles.startPage}>
       <div className={styles.startPageLeftBlock}>

@@ -1,6 +1,10 @@
+import { useContext } from "react";
+import { QuizContext } from "../../Contexts";
 import styles from './ResultPage.module.css';
 
-function ResultPage({ score, setQuizCompleted }) {
+function ResultPage() {
+  const { score, onPlayAgain } = useContext(QuizContext);
+
   return (
     <div className={styles.resultPage}>
       <div className={styles.resultPageLeftBlock}>
@@ -12,7 +16,7 @@ function ResultPage({ score, setQuizCompleted }) {
           {score}
           <span>out of 10</span>
         </div>
-        <button className={styles.resultPageBtn} onClick={() => setQuizCompleted(false)}>Play Again</button>
+        <button className={styles.resultPageBtn} onClick={onPlayAgain}>Play Again</button>
       </div>
     </div>
   );

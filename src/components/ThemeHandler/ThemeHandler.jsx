@@ -1,12 +1,14 @@
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import { IoSunnyOutline, IoMoonOutline } from "react-icons/io5";
-import  styles from './ThemeHandler.module.css';
+import { QuizContext } from "../../Contexts";
+import styles from './ThemeHandler.module.css';
 
-function ThemeHandler({ isDark, toggleThemeHandler }) {
+function ThemeHandler() {
+  const { isDark, toggleTheme } = useContext(QuizContext);
 
   useEffect(() => {
     const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    toggleThemeHandler(prefersDarkMode);
+    toggleTheme(prefersDarkMode);
   }, []);
 
   return (
@@ -16,7 +18,7 @@ function ThemeHandler({ isDark, toggleThemeHandler }) {
         <input
           type="checkbox"
           checked={isDark}
-          onChange={() => toggleThemeHandler()}
+          onChange={() => toggleTheme()}
         />
         <div className={styles.darkModeToggleSlider}/>
       </label>

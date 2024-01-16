@@ -1,8 +1,11 @@
-import {useState} from "react";
+import { useContext, useState } from "react";
 import { quizData } from "../../quizData";
 import QuizQuestion from "../../components/QuizQuestion/QuizQuestion";
+import { QuizContext } from "../../Contexts";
 
-function QuizPage({ quizSubject, setQuizCompleted, score, setScore }) {
+function QuizPage() {
+  const { quizSubject, setQuizCompleted, score, setScore } = useContext(QuizContext);
+
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const questionList = quizData.find((list) => list.id === quizSubject).questionsList;
 
